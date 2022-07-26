@@ -12,7 +12,10 @@ app.use(cors());
 // Base de Datos
  dbConnection();
 
-    console.log(process.env)
+ // Lectura y parseo del body
+ app.use(express.json());
+
+   // console.log(process.env)
 // Rutas
 //mean_user 
 //bnnUdf36s4dDEVQt
