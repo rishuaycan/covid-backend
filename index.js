@@ -28,6 +28,7 @@ app.get('/', (req, res)=> {
 
 //Rutas
 app.use('/api/usuarios',require('./routes/usuario.routes'));
+app.use('/api/pacientes',require('./routes/paciente.routes'));
 
 app.listen(process.env.PORT,() => {
     console.log('Servidor corriendo en puerto ' + process.env.PORT);
