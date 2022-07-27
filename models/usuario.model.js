@@ -14,10 +14,17 @@ const UsuarioSchema = Schema({
     password: {
 
     },
+    img: {
+        type: String,
+    },
     role: {
-        type:String,
+        type: String,
         required: true,
         default: 'USER_ROLE'
-    }
+    },
+    google: {
+        type: Boolean,
+        default: false
+    },
 })
 module.exports = model('Usuario',UsuarioSchema)

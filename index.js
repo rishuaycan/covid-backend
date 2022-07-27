@@ -15,7 +15,7 @@ app.use(cors());
  // Lectura y parseo del body
  app.use(express.json());
 
-   // console.log(process.env)
+ //console.log(process.env)
 // Rutas
 //mean_user 
 //bnnUdf36s4dDEVQt
@@ -25,7 +25,14 @@ app.get('/', (req, res)=> {
         msg: 'Hola Mundo'
     })
 })
+const array = [];
+// while (true) {
+ // This makes the array bigger on each iteration
+//   array.push(new Array(10000000));
 
+//   const memory = process.memoryUsage();
+//   console.log((memory.heapUsed / 1024 / 1024 / 1024).toFixed(4), 'GB');
+// }
 //Rutas
 app.use('/api/usuarios',require('./routes/usuario.routes'));
 app.use('/api/pacientes',require('./routes/paciente.routes'));

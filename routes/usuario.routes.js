@@ -11,6 +11,4 @@ Ruta:  /api/usuarios
 router.get('/',getUsuarios)
 router.post('/',createUsuarios)
 
-
-
 module.exports = router;
