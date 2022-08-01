@@ -1,5 +1,5 @@
 const {Router} = require('express');
-const {getPacientes} = require('../controller/paciente.controller');
+const {getPacientes,getPacientePorFechaVacunacion,getCantidadPacientes} = require('../controller/paciente.controller');
 
 const router = Router();
 
@@ -8,6 +8,9 @@ const router = Router();
 Ruta:  /api/pacientes
 
  */
-router.get('/',getPacientes)
+router.post('/cantidad',getCantidadPacientes)
+router.post('/',getPacientes)
+router.post('/',getPacientePorFechaVacunacion)
+
 
 module.exports = router;

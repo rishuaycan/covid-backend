@@ -26,8 +26,8 @@ app.get('/', (req, res)=> {
     })
 })
 const array = [];
-// while (true) {
- // This makes the array bigger on each iteration
+//while (true) {
+//This makes the array bigger on each iteration
 //   array.push(new Array(10000000));
 
 //   const memory = process.memoryUsage();
@@ -36,8 +36,8 @@ const array = [];
 //Rutas
 app.use('/api/usuarios',require('./routes/usuario.routes'));
 app.use('/api/pacientes',require('./routes/paciente.routes'));
+app.use('/api/pacientes/fechaVacunacion',require('./routes/paciente.routes'));
 
 app.listen(process.env.PORT,() => {
     console.log('Servidor corriendo en puerto ' + process.env.PORT);
 });
-
