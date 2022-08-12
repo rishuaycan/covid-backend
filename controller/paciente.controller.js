@@ -2,14 +2,21 @@ const Paciente = require('../models/paciente.model')
 const fs = require("JSONStream");
 
 const getPacientes = async (req, res) => {
-    const {centro} = req.body 
+    const {centro} = req.body;
 
-    const pacientes = await Paciente.find({establecimiento:centro}); 
+    const [pacientes,total ] = await Promise.all([
+        Paciente.find({establecimiento: centro})
+                    .limit(300),
+        Paciente.count()
+    ])
+    // const paciente = await Paciente.find({establecimiento:centro})
+    //                                 .limit(50);
     // const pacientes2 = await Paciente.find({establecimiento:'EL EXITO'});
-    const pacientesOut = extractLargeJson(pacientes);
+    //const pacientesOut = extractLargeJson(pacientes);
     res.json({
         ok: true,
-        paciente:pacientesOut
+        pacientes,
+        total
     })
 }
 const getCantidadPacientes = async (req, res) => {

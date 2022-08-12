@@ -34,6 +34,8 @@ const array = [];
 //   console.log((memory.heapUsed / 1024 / 1024 / 1024).toFixed(4), 'GB');
 // }
 //Rutas
+app.use('/api/hospitales',require('./routes/hospital.routes'));
+
 app.use('/api/usuarios',require('./routes/usuario.routes'));
 app.use('/api/pacientes',require('./routes/paciente.routes'));
 app.use('/api/pacientes/fechaVacunacion',require('./routes/paciente.routes'));
