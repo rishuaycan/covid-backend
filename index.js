@@ -37,6 +37,7 @@ const array = [];
 app.use('/api/usuarios',require('./routes/usuario.routes'));
 app.use('/api/pacientes',require('./routes/paciente.routes'));
 app.use('/api/pacientes/fechaVacunacion',require('./routes/paciente.routes'));
+app.use('/api/login',require('./routes/auth.routes'));
 
 app.listen(process.env.PORT,() => {
     console.log('Servidor corriendo en puerto ' + process.env.PORT);

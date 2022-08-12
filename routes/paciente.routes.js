@@ -10,7 +10,7 @@ Ruta:  /api/pacientes
  */
 router.post('/cantidad',getCantidadPacientes)
 router.post('/',getPacientes)
-router.post('/',getPacientePorFechaVacunacion)
+router.post('/fechavacunacion',getPacientePorFechaVacunacion)
 
 
 module.exports = router;
